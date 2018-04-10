@@ -1,4 +1,4 @@
-# javaFX Template
+# javaFX Templates
 
 * Template
   - signin-signup single section layout
