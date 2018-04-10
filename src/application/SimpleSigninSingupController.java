@@ -10,7 +10,6 @@ import application.forms.LoginForm;
 import application.forms.RegisterForm;
 import application.handlers.LoginRegiseterTextClickHanlder;
 import application.handlers.LoginRegisterButtonsHandler;
-import application.utils.AlertUtil;
 import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -46,9 +45,9 @@ public class SimpleSigninSingupController implements Initializable {
     	loginForm = new LoginForm( loginUsername, loginPassword );
     	registerForm = new RegisterForm(registerUsername, registerPassword, registerEmail);
 
-    	loginViewBtn.setOnMouseClicked( new LoginRegiseterTextClickHanlder() );
-    	registerViewBtn.setOnMouseClicked( new LoginRegiseterTextClickHanlder() );
-    	closeBtn.setOnMouseClicked( new LoginRegiseterTextClickHanlder() );
+    	loginViewBtn.setOnMouseClicked( new LoginRegiseterTextClickHanlder(loginPane, registerPane) );
+    	registerViewBtn.setOnMouseClicked( new LoginRegiseterTextClickHanlder(loginPane, registerPane) );
+    	closeBtn.setOnMouseClicked( new LoginRegiseterTextClickHanlder(loginPane, registerPane) );
 
     	signinBtn.setOnAction( new LoginRegisterButtonsHandler() );
     	registerBtn.setOnAction( new LoginRegisterButtonsHandler() );

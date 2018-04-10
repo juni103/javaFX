@@ -4,11 +4,21 @@ import application.SimpleSigninSingupController;
 import application.utils.AppUtils;
 import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
 import javafx.event.EventHandler;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
-public class LoginRegiseterTextClickHanlder extends SimpleSigninSingupController implements EventHandler<MouseEvent> {
+public class LoginRegiseterTextClickHanlder implements EventHandler<MouseEvent> {
+
+	private AnchorPane loginPane;
+    private AnchorPane registerPane;
+
+    public LoginRegiseterTextClickHanlder(AnchorPane loginPane, AnchorPane registerPane) {
+    	this.loginPane = loginPane;
+    	this.registerPane = registerPane;
+    }
 
 	@Override
 	public void handle(MouseEvent event) {
